@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="8" parallel="tests" name="All E2E Tests" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="com.ca.listeners.SuiteListener"/>
+        <listener class-name="com.ca.listeners.TestListener"/>
+    </listeners>
+
+    <test thread-count="8" name="CA E2E UI Tests on Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <packages>
+            <package name="com.ca.tests.login"/>
+            <package name="com.ca.tests.register"/>
+        </packages>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
